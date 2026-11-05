@@ -1,0 +1,92 @@
+.dashboard_cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2em;
+    width: 87.2%;
+    margin: 1em 15em;
+}
+
+.dashboard_card {
+    background-color: #ffffff;
+    border: 1px solid #eeeeF4;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    min-width: 0;
+    height: 100%;
+    margin: 0px 2.6em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard_card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard_card .card-content {
+    padding: 24px;
+}
+
+.card_label {
+    color: #6b7280;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.card_amount {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.income_amount {
+    color: #15966a;
+}
+
+.expense_amount {
+    color: #dc4545;
+}
+
+.balance_amount {
+    color: #5b45dc;
+}
+
+.card_description {
+    color: #8b8b98;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    .dashboard_cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dashboard_card .card-content {
+        padding: 20px;
+    }
+
+    .card_amount {
+        font-size: 24px;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .dashboard_cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .dashboard_card .card-content {
+        padding: 18px;
+    }
+
+    .card_amount {
+        font-size: 23px;
+    }
+}

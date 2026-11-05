@@ -1,0 +1,19 @@
+.chart-ctr {
+    width: 65%;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 2em;
+    margin-left: 17.7em;
+}
+
+.chart-ctr p{
+    padding: 1em;
+    color: black;
+    font-weight: 600;
+    font-size: larger;
+}
+
+.pieChart{
+    background-color: #ffffff;
+    border-radius: 2em;
+}

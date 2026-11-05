@@ -1,0 +1,175 @@
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f3;
+}
+
+.table-ctr{
+    width: 82.5%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    margin-left: 17.8em;
+    margin-bottom: 3em;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+
+}
+
+.title-ctr{
+    padding: 0.5em;
+}
+.title-ctr p{
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+
+.table-styles{
+    background-color: #ffffff;
+    margin: 0 0.5em;
+}
+
+.table-styles td{
+    padding : 1em;
+}
+
+.table-styles tr {
+    border-bottom:  solid rgb(237, 236, 236);
+    width: 50%;
+}
+.table-styles tr th {
+    color: gray;
+}
+td.date-txt {
+    color: gray;
+}
+.pagination-info {
+    color: #687488;
+    font-size: 13px;
+}
+td.description, td.amount, td.category{
+    color: black;
+    font-weight: 200;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+td.amount {
+    text-align: right !important;
+}
+
+.pagination-buttons {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination-button {
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #475569;
+    border-radius: 7px;
+    padding: 7px 11px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background: #aca5f0;
+}
+
+.pagination-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-style{
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.page-style-info{
+    color: black;
+}
+
+.pagination-button.active {
+    background: #4b40ab;
+    color: #ffffff;
+    border-color: #08716a;
+}
+.category-badge-food{
+    background-color: #edebfa ;
+    color: #6253e5;
+}
+
+.category-badge-travel{
+    background-color: rgb(251, 235, 215) ;
+    color: darkorange;
+}
+
+.edit-icon{
+    margin: 1em;
+}
+
+.edit-icon button{
+    font-size: 1.2em;
+
+}
+
+.del-icon{
+    margin: 0.5em;
+}
+
+.del-icon button{
+    font-size: 1.2em;
+    color: red;
+}
+
+.category-badge-rent{
+    background-color: #c4f5f1 ;
+    color: #08716a;
+}
+
+.category-badge-emi{
+    background-color: rgb(232, 216, 247) ;
+    color: blueviolet;
+}
+
+.category-badge-shopping{
+    background-color: rgb(215, 247, 247) ;
+    color: aqua;
+}
+
+.category-badge-salary{
+    background-color: rgb(243, 217, 217) ;
+    color: brown;
+}
+
+.category-badge-fashion{
+    background-color: rgb(229, 254, 254) ;
+    color: darkcyan;
+}
+
+.common-category{
+    padding: 0.3em 0.6em;
+    border-radius: 1em;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .pagination-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pagination-buttons {
+        flex-wrap: wrap;
+    }
+}

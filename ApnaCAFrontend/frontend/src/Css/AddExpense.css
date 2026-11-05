@@ -1,0 +1,72 @@
+
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 45px;
+  background-color: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard_info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 15em;
+}
+
+.dashboard_info h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.dashboard_info span {
+  font-size: 18px;
+  color: #667085;
+}
+
+.dashboard_actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.month_btn,
+.add_expense_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 22px;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.month_btn {
+  background-color: white;
+  color: #111827;
+  border: 1px solid #d5dbe3;
+}
+
+.add_expense_btn {
+  background-color: #0c625b;
+  color: white;
+  border: 1px solid #0c625b;
+}
+
+@media (max-width: 650px) {
+  .btn_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  .dashboard_actions {
+    flex-wrap: wrap;
+  }
+}

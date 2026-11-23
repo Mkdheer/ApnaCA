@@ -1,8 +1,21 @@
 import { LOCAL_URL } from "../Constants";
 import axios from "axios";
 
-const fetchBal = async () => {
-    const response = await axios.get(`${LOCAL_URL}/getMonthExpense`)
+const fetchBal = async (startDate, 
+                        endDate,
+                        transactionType = "ALL",
+                        category = "ALL",
+                        paymentMethod = "ALL"
+) => {
+    const response = await axios.get(`${LOCAL_URL}/getMonthExpense`,{
+        params : {
+                    startDate, 
+                    endDate,
+                    transactionType,
+                    category,
+                    paymentMethod
+        }
+    });
     return response.data;
 }
 
@@ -11,11 +24,10 @@ export {fetchBal};
 
 const sendData = async (transactionData) => {
             try{
-                console.log(LOCAL_URL+"/addExpense");
                 const sendResponse = await axios.post(LOCAL_URL+"/addExpense",transactionData);
                 return sendResponse.data;
             }catch(error){
-                console.log("Something wenr wrong", error)
+                console.log("Something wenr wrong expense.js", error)
             }
 }
 export {sendData};
@@ -39,11 +51,18 @@ const expensesData = async (page, size) => {
 export {expensesData};
 
 
-const monthChart = async (year, month) => {
+const monthChart = async (startDate, 
+                        endDate,
+                        transactionType = "ALL",
+                        category = "ALL",
+                        paymentMethod = "ALL") => {
             const monthData = await axios.get(`${LOCAL_URL}/getMonthExpenseByCategory`,{
                 params : {
-                    year : year,
-                    month : month
+                    startDate, 
+                    endDate,
+                    transactionType,
+                    category,
+                    paymentMethod
                 }
             });
             return monthData.data;
@@ -60,14 +79,13 @@ export {sixMonthData};
 
 const delById = async (id) => {
     const delData = await axios.delete(`${LOCAL_URL}/${id}`);
-    console.log(delData);
     return delData.status;
 }
 
 export {delById};
 
-const updateById = async (id) => {
-    const updateData = axios.put(`${LOCAL_URL}/update/${id}`)
+const updateById = async (id,expense) => {
+    const updateData = axios.put(`${LOCAL_URL}/update/${id}`, expense);
     return updateData.data;
 }
 

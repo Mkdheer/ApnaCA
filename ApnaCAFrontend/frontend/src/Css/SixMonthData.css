@@ -1,18 +1,65 @@
-.bar-ctr{
-    width: 95%;
-    height: 300px;
+
+/* =================================
+   BAR CHART CARD
+================================= */
+
+.bar-ctr {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    height: 360px;
+
     background-color: #ffffff;
-    border-radius: 2em;
+    border: 1px solid #eeeeF4;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.bar-ctr p{
-    padding: 1em;
-    color: black;
-    font-weight: 600;
-    font-size: larger;
+/* =================================
+   CHART TITLE
+================================= */
+
+.bar-ctr .chart-title {
+    flex-shrink: 0;
+
+    margin: 0 0 10px;
+    padding: 0;
+
+    color: #111827;
+    font-size: 17px;
+    font-weight: 700;
 }
 
-.barChart{
-    background-color: #ffffff;
-    border-radius: 2em;
+/* =================================
+   CHART CONTENT
+================================= */
+
+.bar-ctr .chart-content {
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media screen and (max-width: 480px) {
+    .bar-ctr {
+        height: 340px;
+        padding: 16px;
+        border-radius: 13px;
+    }
+
+    .bar-ctr .chart-title {
+        font-size: 16px;
+    }
 }

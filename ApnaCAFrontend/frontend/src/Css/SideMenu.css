@@ -1,26 +1,44 @@
+/* =========================================
+   APNACA - MAIN DASHBOARD LAYOUT
+========================================= */
 
-/* ===== Fixed sidebar ===== */
+* {
+    box-sizing: border-box;
+}
+
+.dashboard-layout {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
 .apnaca-sidebar {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 245px;
     height: 100vh;
-    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
 
     padding: 25px 14px 20px;
-    background-color: #ffffff;
+
+    background: #ffffff;
     border-right: 1px solid #e5e7eb;
 
     overflow-y: auto;
     overflow-x: hidden;
+
     z-index: 1000;
 }
 
-/* ===== Brand ===== */
+/* Brand */
+
 .sidebar-brand {
     display: flex;
     align-items: center;
@@ -39,11 +57,12 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #16a34a;
+    background: #16a34a;
     color: #ffffff;
 
     font-size: 24px;
     font-weight: 700;
+
     border-radius: 12px;
 }
 
@@ -60,7 +79,8 @@
     color: #87918d;
 }
 
-/* ===== Menu heading ===== */
+/* Section title */
+
 .sidebar-section-title {
     padding: 0 10px;
     margin-bottom: 12px;
@@ -71,7 +91,8 @@
     letter-spacing: 1.5px;
 }
 
-/* ===== Navigation ===== */
+/* Navigation */
+
 .sidebar-navigation {
     display: flex;
     flex-direction: column;
@@ -80,12 +101,12 @@
 
 .sidebar-item {
     width: 100%;
+
     display: flex;
     align-items: center;
     gap: 13px;
 
     padding: 12px 13px;
-    box-sizing: border-box;
 
     border-radius: 10px;
     text-decoration: none;
@@ -94,8 +115,7 @@
     font-size: 14px;
     font-weight: 400;
 
-    transition: background-color 0.2s ease,
-                color 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .sidebar-item span:first-child {
@@ -105,23 +125,23 @@
 }
 
 .sidebar-item:hover {
-    background-color: #f0f9f3;
+    background: #f0f9f3;
     color: #15803d;
 }
 
-/* Active page */
 .sidebar-item.active {
-    background-color: #e9f8ee;
+    background: #e9f8ee;
     color: #15803d;
     font-weight: 600;
 }
 
-/* ===== Footer stays at bottom ===== */
+/* Footer */
+
 .sidebar-footer {
     margin-top: auto;
     padding: 17px 13px;
 
-    background-color: #f2faf4;
+    background: #f2faf4;
     border-radius: 12px;
 }
 
@@ -143,18 +163,26 @@
     font-size: 12px;
 }
 
-/* ===== Dashboard layout ===== */
+/* =========================================
+   DASHBOARD CONTENT
+========================================= */
+
 .dashboard-content {
     width: calc(100% - 245px);
     min-width: 0;
+
     margin-left: 245px;
     padding: 25px;
 
     box-sizing: border-box;
 }
 
-/* ===== Responsive screens ===== */
-@media (max-width: 768px) {
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media screen and (max-width: 768px) {
+
     .apnaca-sidebar {
         width: 200px;
         padding: 20px 10px;
@@ -179,6 +207,62 @@
     .dashboard-content {
         width: calc(100% - 200px);
         margin-left: 200px;
-        padding: 15px 10px;
+        padding: 20px 15px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   Sidebar becomes top navigation
+========================================= */
+
+@media screen and (max-width: 480px) {
+
+    .apnaca-sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 15px;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+
+        overflow: visible;
+    }
+
+    .sidebar-brand {
+        margin-bottom: 18px;
+    }
+
+    .sidebar-section-title {
+        margin-bottom: 8px;
+    }
+
+    .sidebar-navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .sidebar-item {
+        width: auto;
+        flex: 1 1 auto;
+        justify-content: center;
+
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .dashboard-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 16px;
     }
 }

@@ -1,68 +1,281 @@
+
+/* =========================================
+   TABLE CARD CONTAINER
+========================================= */
+
+.table-ctr {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    margin: 25px 0 45px;
+    padding: 22px;
+
+    box-sizing: border-box;
+
+    background-color: #ffffff;
+    border: 1px solid #eeeeF4;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* =========================================
+   TABLE HEADING
+========================================= */
+
+.title-ctr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.title-ctr .table-title {
+    margin: 0;
+
+    color: #111827;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.table-subtitle {
+    display: block;
+    margin-top: 5px;
+
+    color: #8b8b98;
+    font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVE TABLE WRAPPER
+========================================= */
+
+.expense-table-scroll {
+    width: 100%;
+    min-width: 0;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.table-styles {
+    width: 100%;
+    min-width: 680px;
+
+    margin: 0;
+    background-color: #ffffff;
+
+    border-collapse: collapse;
+}
+
+.table-styles thead th {
+    padding: 15px 14px;
+
+    background-color: #f8f9fb;
+
+    color: #667085;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.table-styles tbody td {
+    padding: 17px 14px;
+    vertical-align: middle;
+
+    color: #374151;
+    font-size: 13px;
+
+    border-bottom: 1px solid #f0f1f4;
+}
+
+.table-styles tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table-styles tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+/* =========================================
+   TABLE COLUMNS
+========================================= */
+
+.table-styles .date-txt {
+    color: #7b8494;
+    white-space: nowrap;
+}
+
+.table-styles .description {
+    color: #374151;
+    font-weight: 500;
+
+    min-width: 150px;
+    overflow-wrap: anywhere;
+}
+
+.table-styles .category {
+    white-space: nowrap;
+}
+
+.table-styles .amount,
+.table-styles .amount-heading {
+    text-align: right !important;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.table-styles .amount {
+    color: #111827;
+}
+
+.table-styles .actions-heading {
+    text-align: center;
+}
+
+.table-styles .action-cell {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* =========================================
+   CATEGORY BADGES
+========================================= */
+
+.common-category {
+    display: inline-block;
+
+    padding: 5px 11px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.category-badge-food {
+    background-color: #edebfa;
+    color: #6253e5;
+}
+
+.category-badge-travel {
+    background-color: #fbebd7;
+    color: #c56a00;
+}
+
+.category-badge-rent {
+    background-color: #e0f7f4;
+    color: #08716a;
+}
+
+.category-badge-emi {
+    background-color: #eee5fa;
+    color: #7741aa;
+}
+
+.category-badge-shopping {
+    background-color: #def5f5;
+    color: #087c80;
+}
+
+.category-badge-salary {
+    background-color: #f3e6e6;
+    color: #963c3c;
+}
+
+.category-badge-fashion {
+    background-color: #e5f4f4;
+    color: #167b7b;
+}
+
+.category-badge-other {
+    background-color: #eef0f4;
+    color: #596579;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.action-cell button {
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 16px;
+    transition: background 0.2s ease;
+}
+
+.edit-action {
+    color: #6253e5;
+    margin-right: 5px;
+}
+
+.edit-action:hover {
+    background-color: #edebfa;
+}
+
+.delete-action {
+    color: #dc4545;
+}
+
+.delete-action:hover:not(:disabled) {
+    background-color: #fff0f0;
+}
+
+.action-cell button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   EMPTY TABLE
+========================================= */
+
+.empty-table {
+    padding: 35px !important;
+    text-align: center !important;
+
+    color: #8b8b98 !important;
+}
+
+/* =========================================
+   PAGINATION
+========================================= */
+
 .pagination-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     gap: 15px;
-    margin-top: 24px;
+
+    margin-top: 20px;
     padding-top: 18px;
+
     border-top: 1px solid #edf0f3;
 }
 
-.table-ctr{
-    width: 82.5%;
-    max-width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    margin-left: 17.8em;
-    margin-bottom: 3em;
-    padding: 1rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
-
-}
-
-.title-ctr{
-    padding: 0.5em;
-}
-.title-ctr p{
-    font-weight: bold;
-    font-size: large;
-    color: black;
-}
-
-.table-styles{
-    background-color: #ffffff;
-    margin: 0 0.5em;
-}
-
-.table-styles td{
-    padding : 1em;
-}
-
-.table-styles tr {
-    border-bottom:  solid rgb(237, 236, 236);
-    width: 50%;
-}
-.table-styles tr th {
-    color: gray;
-}
-td.date-txt {
-    color: gray;
-}
 .pagination-info {
     color: #687488;
     font-size: 13px;
-}
-td.description, td.amount, td.category{
-    color: black;
-    font-weight: 200;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-
-td.amount {
-    text-align: right !important;
+    white-space: nowrap;
 }
 
 .pagination-buttons {
@@ -72,17 +285,22 @@ td.amount {
 }
 
 .pagination-button {
+    min-width: 34px;
+
+    padding: 7px 11px;
+
     border: 1px solid #e2e8f0;
+    border-radius: 7px;
+
     background: #ffffff;
     color: #475569;
-    border-radius: 7px;
-    padding: 7px 11px;
+
     font-size: 13px;
     cursor: pointer;
 }
 
-.pagination-button:hover:not(:disabled) {
-    background: #aca5f0;
+.pagination-button:hover:not(:disabled):not(.active) {
+    background: #f0efff;
 }
 
 .pagination-button:disabled {
@@ -90,86 +308,71 @@ td.amount {
     cursor: not-allowed;
 }
 
-.page-style{
-    padding: 1em;
-    border-radius: 1em;
-}
-
-.page-style-info{
-    color: black;
-}
-
 .pagination-button.active {
     background: #4b40ab;
     color: #ffffff;
-    border-color: #08716a;
-}
-.category-badge-food{
-    background-color: #edebfa ;
-    color: #6253e5;
+    border-color: #4b40ab;
 }
 
-.category-badge-travel{
-    background-color: rgb(251, 235, 215) ;
-    color: darkorange;
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+    .table-ctr {
+        padding: 18px;
+        margin: 20px 0 35px;
+    }
+
+    .table-styles {
+        min-width: 650px;
+    }
 }
 
-.edit-icon{
-    margin: 1em;
-}
+/* =========================================
+   MOBILE
+========================================= */
 
-.edit-icon button{
-    font-size: 1.2em;
+@media screen and (max-width: 480px) {
+    .table-ctr {
+        padding: 14px;
+        border-radius: 13px;
+        margin: 18px 0 25px;
+    }
 
-}
+    .title-ctr {
+        margin-bottom: 15px;
+    }
 
-.del-icon{
-    margin: 0.5em;
-}
+    .title-ctr .table-title {
+        font-size: 16px;
+    }
 
-.del-icon button{
-    font-size: 1.2em;
-    color: red;
-}
+    .table-subtitle {
+        font-size: 12px;
+    }
 
-.category-badge-rent{
-    background-color: #c4f5f1 ;
-    color: #08716a;
-}
+    .table-styles {
+        min-width: 620px;
+    }
 
-.category-badge-emi{
-    background-color: rgb(232, 216, 247) ;
-    color: blueviolet;
-}
+    .table-styles thead th,
+    .table-styles tbody td {
+        padding: 13px 11px;
+    }
 
-.category-badge-shopping{
-    background-color: rgb(215, 247, 247) ;
-    color: aqua;
-}
-
-.category-badge-salary{
-    background-color: rgb(243, 217, 217) ;
-    color: brown;
-}
-
-.category-badge-fashion{
-    background-color: rgb(229, 254, 254) ;
-    color: darkcyan;
-}
-
-.common-category{
-    padding: 0.3em 0.6em;
-    border-radius: 1em;
-    font-weight: 600;
-}
-
-@media (max-width: 600px) {
     .pagination-container {
         flex-direction: column;
         align-items: flex-start;
+        gap: 14px;
     }
 
     .pagination-buttons {
+        width: 100%;
         flex-wrap: wrap;
+    }
+
+    .pagination-button {
+        padding: 7px 9px;
     }
 }

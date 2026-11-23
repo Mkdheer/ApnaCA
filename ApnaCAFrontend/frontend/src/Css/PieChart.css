@@ -1,19 +1,77 @@
+
+/* =================================
+   PIE CHART CARD
+================================= */
+
 .chart-ctr {
-    width: 65%;
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    height: 360px;
+
     background-color: #ffffff;
-    border-radius: 2em;
-    margin-left: 17.7em;
+    border: 1px solid #eeeeF4;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.chart-ctr p{
-    padding: 1em;
-    color: black;
-    font-weight: 600;
-    font-size: larger;
+/* =================================
+   CHART TITLE
+================================= */
+
+.chart-ctr .chart-title {
+    flex-shrink: 0;
+
+    margin: 0 0 10px;
+    padding: 0;
+
+    color: #111827;
+    font-size: 17px;
+    font-weight: 700;
 }
 
-.pieChart{
-    background-color: #ffffff;
-    border-radius: 2em;
+/* =================================
+   CHART CONTENT
+================================= */
+
+.chart-ctr .chart-content {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+.chart-ctr .chart-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: #8b8b98;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media screen and (max-width: 480px) {
+    .chart-ctr {
+        height: 340px;
+        padding: 16px;
+        border-radius: 13px;
+    }
+
+    .chart-ctr .chart-title {
+        font-size: 16px;
+    }
 }

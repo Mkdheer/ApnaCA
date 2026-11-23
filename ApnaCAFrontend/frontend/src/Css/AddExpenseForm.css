@@ -1,0 +1,302 @@
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.expense-modal.modal.is-active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.expense-modal,
+.expense-modal * {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   MODAL CARD
+========================================= */
+
+.expense-modal .expense-modal-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 620px;
+    max-width: 100%;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.expense-modal .expense-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    padding: 22px 26px;
+    background: #ffffff;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.expense-modal .modal-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.expense-modal .expense-modal-subtitle {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #8b8b98;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.expense-modal .expense-form {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* =========================================
+   MODAL BODY
+========================================= */
+
+.expense-modal .expense-modal-body {
+    flex: 1;
+    min-height: 0;
+
+    padding: 26px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #ffffff;
+}
+
+.expense-modal .expense-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 18px;
+}
+
+.expense-modal .expense-field {
+    min-width: 0;
+    margin: 0;
+}
+
+.expense-modal .expense-field-full {
+    grid-column: 1 / -1;
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+.expense-modal .expense-field .label {
+    margin-bottom: 8px;
+
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.expense-modal .expense-field .input,
+.expense-modal .expense-field .select,
+.expense-modal .expense-field .select select,
+.expense-modal .expense-field .textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+.expense-modal .expense-field .input,
+.expense-modal .expense-field .select select,
+.expense-modal .expense-field .textarea {
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+
+    background-color: #ffffff;
+    color: #1f2937;
+
+    font-size: 14px;
+    box-shadow: none;
+}
+
+.expense-modal .expense-field .input,
+.expense-modal .expense-field .select select {
+    height: 44px;
+}
+
+.expense-modal .expense-field .textarea {
+    min-height: 85px;
+    padding: 12px;
+    resize: vertical;
+}
+
+.expense-modal .expense-field .input:focus,
+.expense-modal .expense-field .select select:focus,
+.expense-modal .expense-field .textarea:focus {
+    border-color: #0c625b;
+    box-shadow: 0 0 0 2px rgba(12, 98, 91, 0.10);
+}
+
+.expense-modal .expense-field .input::placeholder,
+.expense-modal .expense-field .textarea::placeholder {
+    color: #a0a5ae;
+}
+
+.expense-modal .expense-field .help {
+    font-size: 12px;
+    color: #8b8b98;
+    margin-top: 7px;
+}
+
+.expense-modal .expense-file-input {
+    padding: 7px;
+    height: auto !important;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.expense-modal .expense-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    flex-shrink: 0;
+
+    padding: 16px 26px;
+    background: #ffffff;
+    border-top: 1px solid #edf0f3;
+}
+
+.expense-modal .expense-modal-footer .button {
+    height: 42px;
+    min-width: 120px;
+
+    margin: 0;
+    padding: 0 18px;
+
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.expense-modal .expense-cancel-btn {
+    background: #ffffff;
+    color: #374151;
+    border: 1px solid #dfe3e8;
+}
+
+.expense-modal .expense-save-btn {
+    background: #0c625b;
+    color: #ffffff;
+    border: 1px solid #0c625b;
+}
+
+.expense-modal .expense-save-btn:hover {
+    background: #094f49;
+    color: #ffffff;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+    .expense-modal .expense-modal-card {
+        width: 560px;
+    }
+
+    .expense-modal .expense-modal-body {
+        padding: 22px;
+    }
+
+    .expense-modal .expense-form-grid {
+        gap: 17px 14px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 520px) {
+    .expense-modal.modal.is-active {
+        padding: 10px;
+    }
+
+    .expense-modal .expense-modal-card {
+        width: 100%;
+        max-width: 100%;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px);
+        border-radius: 13px;
+    }
+
+    .expense-modal .expense-modal-header {
+        padding: 17px;
+    }
+
+    .expense-modal .modal-card-title {
+        font-size: 19px;
+    }
+
+    .expense-modal .expense-modal-subtitle {
+        font-size: 12px;
+    }
+
+    .expense-modal .expense-modal-body {
+        padding: 18px;
+    }
+
+    .expense-modal .expense-form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .expense-modal .expense-field-full {
+        grid-column: auto;
+    }
+
+    .expense-modal .expense-modal-footer {
+        padding: 13px 16px;
+        gap: 10px;
+    }
+
+    .expense-modal .expense-modal-footer .button {
+        flex: 1;
+        min-width: 0;
+        padding: 0 10px;
+        font-size: 13px;
+    }
+}

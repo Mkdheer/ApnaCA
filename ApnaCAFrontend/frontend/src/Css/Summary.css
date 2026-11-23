@@ -1,20 +1,46 @@
+
+/* =================================
+   SUMMARY CARDS CONTAINER
+================================= */
+
 .dashboard_cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2em;
-    width: 87.2%;
-    margin: 1em 15em;
+
+    width: 100%;
+    max-width: 100%;
+
+    gap: 20px;
+    margin: 0 0 25px;
+    padding: 0;
+
+    box-sizing: border-box;
 }
 
+/* =================================
+   INDIVIDUAL CARDS
+================================= */
+
 .dashboard_card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 150px;
+    min-width: 0;
+    min-height: 0;
+
+    margin: 0;
+    padding: 0;
+
     background-color: #ffffff;
     border: 1px solid #eeeeF4;
     border-radius: 14px;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-    min-width: 0;
-    height: 100%;
-    margin: 0px 2.6em;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 .dashboard_card:hover {
@@ -22,19 +48,21 @@
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
 }
 
+/* Card content */
+
 .dashboard_card .card-content {
     padding: 24px;
 }
 
 .card_label {
     color: #6b7280;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 12px;
 }
 
 .card_amount {
-    font-size: 26px;
+    font-size: clamp(20px, 2vw, 26px);
     font-weight: 700;
     line-height: 1.3;
     margin-bottom: 10px;
@@ -59,23 +87,21 @@
     margin-bottom: 0;
 }
 
-/* Tablets */
-@media screen and (max-width: 768px) {
+/* =================================
+   TABLET
+================================= */
+
+@media screen and (max-width: 1100px) {
     .dashboard_cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 16px;
     }
-
-    .dashboard_card .card-content {
-        padding: 20px;
-    }
-
-    .card_amount {
-        font-size: 24px;
-    }
 }
 
-/* Mobile phones */
+/* =================================
+   MOBILE
+================================= */
+
 @media screen and (max-width: 480px) {
     .dashboard_cards {
         grid-template-columns: 1fr;
@@ -84,9 +110,5 @@
 
     .dashboard_card .card-content {
         padding: 18px;
-    }
-
-    .card_amount {
-        font-size: 23px;
     }
 }

@@ -2,7 +2,6 @@ import '../Css/Message.css';
 
 function Message(props){
     const{message} = props;
-    console.log("My Message", message);
     if(!message) return null;
     return (
         <div className="toast-container">
